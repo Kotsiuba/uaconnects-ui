@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>
+    {{title}}
+  </h1>
+
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup)">
+    <div class="form-group">
+      <label for="firstName">First name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Bob" />
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Marley" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" placeholder="bob@marley.com" class="form-control" id="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="mobilePhone">Phone number</label>
+      <input type="phone" placeholder="+380112233444" class="form-control" id="mobilePhone" />
+    </div>
+
+    <div class="form-group py-3">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="about-us"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="about-us">
+          <li><a class="dropdown-item" href="#">News</a></li>
+          <li><a class="dropdown-item" href="#">Friends</a></li>
+          <li><input placeholder="Other" class="dropdown-item" href="#" />Other</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit Form</button>
+  </form>
+</div>
